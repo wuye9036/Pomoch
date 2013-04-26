@@ -46,6 +46,8 @@ namespace Pomoch
 		private System.Windows.Forms.MenuItem menuItemCancel;
 		private System.Windows.Forms.MenuItem menuItemExit;
 
+		private PomoTaskList tasks;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -77,6 +79,10 @@ namespace Pomoch
 			trayIcon.DoubleClick += TrayIcon_DoubleClick;
 
 			this.Icon = IconSource();
+
+			tasks = new PomoTaskList();
+			tasks.CreatePomoTask("WTF", 3);
+			this.TaskDataGrid.ItemsSource = tasks;
         }
 
 		private void RestoreWindowDisplay()
@@ -116,6 +122,17 @@ namespace Pomoch
 			{
 				this.ShowInTaskbar = true;
 			}
+		}
+
+		private void Window_Loaded(object sender, RoutedEventArgs e)
+		{
+		}
+
+		private void BtnAddTask_Click(object sender, RoutedEventArgs e)
+		{
+			TaskEditor edt = new TaskEditor();
+			edt.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
+			edt.ShowDialog();
 		}
     }
 }

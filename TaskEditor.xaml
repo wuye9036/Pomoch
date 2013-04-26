@@ -1,0 +1,9 @@
+﻿<Window x:Class="Pomoch.TaskEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TaskEditor" Height="96.246" Width="500.841" ShowInTaskbar="False" Topmost="True" ResizeMode="NoResize">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="32" Margin="10,18,0,19" TextWrapping="NoWrap" VerticalAlignment="Center" Width="413" VerticalContentAlignment="Center" FontSize="14"/>
+        <TextBox HorizontalAlignment="Right" Height="32" Margin="0,11,10,10" TextWrapping="NoWrap" Text="123123" VerticalAlignment="Center" Width="40" MaxLines="1" AutoWordSelection="True" VerticalContentAlignment="Center" FontSize="14"/>
+    </Grid>
+</Window>
